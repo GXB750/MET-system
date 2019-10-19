@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = 'a';
+const prefix = '/';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['ahelp','Type ahelp'];
+    var setGame = ['/help','Type /help'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -128,33 +128,33 @@ ${prefix}deletecolors <number> / لحذف الالوان
    `,`
         ***__Music orders__***
 **
-${prefix}play / لتشغيل أغنية برآبط أو بأسم
-${prefix}skip / لتجآوز الأغنية الحآلية
-${prefix}pause / إيقآف الأغنية مؤقتا
-${prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol / لتغيير درجة الصوت 100 - 0
-${prefix}stop / لإخرآج البوت من الروم
-${prefix}np / لمعرفة الأغنية المشغلة حآليا
-${prefix}queue / لمعرفة قآئمة التشغيل
+/{prefix}play / لتشغيل أغنية برآبط أو بأسم
+/{prefix}skip / لتجآوز الأغنية الحآلية
+/{prefix}pause / إيقآف الأغنية مؤقتا
+/{prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+/{prefix}vol / لتغيير درجة الصوت 100 - 0
+/{prefix}stop / لإخرآج البوت من الروم
+/{prefix}np / لمعرفة الأغنية المشغلة حآليا
+/{prefix}queue / لمعرفة قآئمة التشغيل
 **
         ***__Games orders__***
  **       
-${prefix}rps / حجر ورقة مقص
-${prefix}speed / اسرع كتابة
-${prefix}quas / اسئلة عامة
-${prefix}نكت / نكت 
-${prefix}لعبة فكك / فكك
-${prefix}عواصم عشوائي/عواصم
-${prefix}لعبة كت تويت / كت تويت
-${prefix}roll <number> / قرعة
-${prefix}لو خيروك بطريقة حلوة / لو خيروك
-${prefix}لعبة مريم / مريم
-${prefix}فوائد ونصائح  / هل تعلم
-${prefix}يعطيك عقابات قاسية / عقاب 
+/{prefix}rps / حجر ورقة مقص
+/{prefix}speed / اسرع كتابة
+/{prefix}quas / اسئلة عامة
+/{prefix}نكت / نكت 
+/{prefix}لعبة فكك / فكك
+/{prefix}عواصم عشوائي/عواصم
+/{prefix}لعبة كت تويت / كت تويت
+/{prefix}roll <number> / قرعة
+/{prefix}لو خيروك بطريقة حلوة / لو خيروك
+/{prefix}لعبة مريم / مريم
+/{prefix}فوائد ونصائح  / هل تعلم
+/{prefix}يعطيك عقابات قاسية / عقاب 
 =.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.
 welcome يتم الترحيب فى روم باسم
 G.setwelcomer <text channel name> لاختيار روم للترحيب
-${prefix}voiceonline / لتفعيل روم الفويس اونلاين
+/{prefix}voiceonline / لتفعيل روم الفويس اونلاين
 **
    
 `]
